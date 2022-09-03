@@ -22,10 +22,19 @@ The design has a system catalog for storing the metadata and data storage units 
 • List all records of a type
 • Filter records by one of the attributes of a type <br>
 
-Assumptions:
-• All fields are be alphanumeric. Also, type and field names are be alphanumeric.
-• User always enters valid input.
-• The hardware of HALO center and HALO instances are built according to the blueprints.
+<b>Assumptions:</b><br>
+• All fields are be alphanumeric. Also, type and field names are be alphanumeric.<br>
+• User always enters valid input.<br>
+• The hardware of HALO center and HALO instances are built according to the blueprints.<br>
+
+<b>Constraints:</b>
+<br>• The data must be organized in pages and pages must contain records. The page and record structure is explained in the report.
+<br>• Storing all pages in the same file is not allowed. When a file becomes free due to deletions, that file must be deleted.
+<br>• Although a file contains multiple pages, it must read page by page when it is needed. Loading the whole file to RAM is not allowed.
+<br>• The first attribute of all types in HALO software must be a string type, named as “planet” and its value for all records must be “E226 − S187”.
+<br>• The primary key of a record should be assumed to be the value of the second field of that record.
+<br>• Records in the files should be stored in descending order according to their primary keys.
+
 
 Please refer to the report for further details.
 
