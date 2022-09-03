@@ -1,0 +1,39 @@
+{
+    "_comment": "first keys are type names. Type names are unique. Types has files, so inner keys are filenames. They have suffixes like -1,-2. Finally files have pages.",
+    "animal": {
+        "fields": [
+            "planet",
+            "id",
+            "name",
+            "age",
+            "height",
+            "weight"
+        ],
+        "file1": {
+            "page1": {
+                "intervalStart": "",
+                "intervalEnd": "",
+                "blankSpace": 28
+            }
+        }
+    },
+    "human": {
+        "fields": [
+            "planet",
+            "id",
+            "name",
+            "age",
+            "height",
+            "weight",
+            "alias",
+            "occupation"
+        ],
+        "file1": {
+            "page1": {
+                "intervalStart": "3",
+                "intervalEnd": "3",
+                "blankSpace": 20
+            }
+        }
+    }
+}
