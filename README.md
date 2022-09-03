@@ -26,6 +26,7 @@ The design has a system catalog for storing the metadata and data storage units 
 • All fields are be alphanumeric. Also, type and field names are be alphanumeric.<br>
 • User always enters valid input.<br>
 • The hardware of HALO center and HALO instances are built according to the blueprints.<br>
+• Field names, and values cannot be longer than 20 characters. The maximum number of fields cannot be greater than 12.<br>
 
 <b>Constraints:</b>
 <br>• The data must be organized in pages and pages must contain records. The page and record structure is explained in the report.
@@ -34,9 +35,17 @@ The design has a system catalog for storing the metadata and data storage units 
 <br>• The first attribute of all types in HALO software must be a string type, named as “planet” and its value for all records must be “E226 − S187”.
 <br>• The primary key of a record should be assumed to be the value of the second field of that record.
 <br>• Records in the files should be stored in descending order according to their primary keys.
+<br>• There can only be one user logged in to HALO software at any time. Also, any definition and management operation can only be performed while being logged in. Therefore, any operation without a login to HALO should be logged with a username null.
+<br>• Filter operation has a condition part, which can only filter the integer attributes and only less than <, greater than >, and equal = operators can be used to create a condition.
+<br>• Search, update and deletion of records shall always be done by primary key.
+<br>• When a type is deleted, all records of that type must be deleted.
+<br>• Types must be listed by ascending type names. Note that the built-in sort functions do sorting case- sensitively by default. This means that the elements starting with uppercase letters come first in the order.
 
 
-Please refer to the report for further details.
+HALO software logs all authentication, definition, and management operations into a CSV file (namely haloLog.csv) which consists of 4 columns, namely username, occurrence, operation, and status. Username is the name of the current user, the occurrence is the string form of UNIX time, the operation is the string form of the whole operation line prompted in the console, status is the result of the operation. Log file must be persistent and never deleted when the HALO software is either stopped or restarted.
+
+
+<i>Please refer to the report for further details.<i>
 
 ### Running the Program
 - Clone the repository to your local or download the zip
