@@ -12,5 +12,5 @@ Project HALO is a database design and implementation project that provides basic
 - You will find the outputs in the provided output file.
 - You will find the logs in the haloLog.csv file under the directory you run the command.
 
-Developed for CMPE493 Introduction to Information Retrieval course, Bogazici University, Fall 2021, together with Adalet Veyis Turgut and Ufuk Arslan
+<i>Developed for CMPE493 Introduction to Information Retrieval course, Bogazici University, Fall 2021, together with Adalet Veyis Turgut and Ufuk Arslan<i>
 
